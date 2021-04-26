@@ -1,53 +1,74 @@
 !jmb-configuration-v1
 
-name: JMB
+name: JMB1
 outboundEndpoints:
-- name: notRouted
+- name: STR
   flow:
-    name: nullOutboundFlow          
-- name: WMA
-  flow:
-    name: fileOutboundFlow
+    name: jmsOutboundFlow
     parameters:
-    - name: "path"
-      value: "./outbound/test-output-wma"
-    - name: "fileName"
-      value: "outputMessageWMA.xml"
+    - name: "queue"
+      value: "MB-STR"
+- name: PALLETESTIMATOR-Q
+  flow:
+    name: jmsOutboundFlow
+    parameters:
+    - name: "queue"
+      value: "MB-PALLETESTIMATOR"
+- name: HOST
+  flow:
+    name: jmsOutboundFlow
+    parameters:
+    - name: "queue"
+      value: "MB-HOST"
 - name: TMA
   flow:
-    name: fileOutboundFlow
+    name: jmsOutboundFlow
     parameters:
-    - name: "path"
-      value: "./outbound/test-output-tma"
-    - name: "fileName"
-      value: "outputMessageTMA.json"
-- name: ACK.GLOBAL
+    - name: "queue"
+      value: "MB-TMA"
+- name: WMAENVB
   flow:
-    name: fileOutboundFlow
+    name: jmsOutboundFlow
     parameters:
-    - name: "path"
-      value: "./outbound/ack"
-    - name: "fileName"
-      value: "ack.json"
-- name: LOC.DC0001
+    - name: "queue"
+      value: "MB-WMAENVB"
+- name: WMAENVG
   flow:
-    name: fileOutboundFlow
+    name: jmsOutboundFlow
     parameters:
-    - name: "path"
-      value: "./outbound/ack"
-    - name: "fileName"
-      value: "ack-error.json"
+    - name: "queue"
+      value: "MB-WMAENVG"
+- name: ACK
+  flow:
+    name: jmsOutboundFlow
+    parameters:
+    - name: "queue"
+      value: "MB-ACK"
+- name: OMS
+  flow:
+    name: jmsOutboundFlow
+    parameters:
+    - name: "queue"
+      value: "MB-OMS"
 outboundMappings:
-  - receiver: 'WMA.WEST|WMA.EAST'
+  - receiver: 'HOST.GLOBAL'
     request: '*:*:*'
-    outboundEndpoint: 'WMA'
-  - receiver: 'TMA.WEST|TMA.EAST'
+    outboundEndpoint: 'HOST'
+  - receiver: 'TMS.GLOBAL'
     request: '*:*:*'
     outboundEndpoint: 'TMA'
   - receiver: 'LOC.DC0001'
     request: '*:*:*'
-    outboundEndpoint: 'LOC.DC0001'
-  - receiver: 'NOT.ROUTED'
+    outboundEndpoint: 'WMAENVB'   
+  - receiver: 'LOC.DC0002'
     request: '*:*:*'
-    outboundEndpoint: 'notRouted'
- 
+    outboundEndpoint: 'WMAENVB'
+  - receiver: 'LOC.DC1001'
+    request: '*:*:*'
+    outboundEndpoint: 'WMAENVG'
+  - receiver: 'LOC.DC1002'
+    request: '*:*:*'
+    outboundEndpoint: 'WMAENVG'
+  - receiver: 'ACK.GLOBAL'
+    request: '*:*:*'
+    outboundEndpoint: 'ACK'
