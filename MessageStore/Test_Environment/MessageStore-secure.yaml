@@ -1,6 +1,6 @@
 MSDatabase:
-  user-secure: "MSGSTRCSSV11"
-  password-secure: "MSGSTRCSSV11"
+  user-secure: "CONNECT_MSCSSV11"
+  password-secure: "CONNECT_MSCSSV11"
 
 
 server:
