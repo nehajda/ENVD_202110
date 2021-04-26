@@ -1,7 +1,7 @@
 # Properties relating to Database
 
 MSDatabase:
-  url: "jdbc:oracle:thin:@localhost:1521:TestDB"
+  url: "jdbc:oracle:thin:@in2npdlnxdb14:1521:IF1212A"
   driverClassName: "oracle.jdbc.driver.OracleDriver"
   #SQL Server Example, Please comment/uncomment db parameters as per your db of choice
   #url: "jdbc:sqlserver://sql-fwk-dev.database.windows.net:1433;database=<Your DB>;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;"
@@ -9,11 +9,11 @@ MSDatabase:
    
         
   connection:
-    maxPoolSize: "100"
-    minPoolSize: "20"
+    maxPoolSize: "30"
+    minPoolSize: "10"
     preparedStatementCacheSize: "10"
     maxWait: "10"
-    acquireIncrement: "20"
+    acquireIncrement: "2"
 
 queryTimeout: "500"
 
