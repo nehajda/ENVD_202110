@@ -1,0 +1,1 @@
+EXEC CONNECT_MS.prepareToPurge @p_retentionDays = 5, @p_batchSize = 5000 
