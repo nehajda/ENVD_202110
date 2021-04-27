@@ -1,6 +1,6 @@
 MSDatabase:
-  user-secure: "CONNECT_MSCSSV11"
-  password-secure: "CONNECT_MSCSSV11"
+  user-secure: "CONNECT_MSENVD"
+  password-secure: "CONNECT_MSENVD"
 
 
 server:
