@@ -1,0 +1,33 @@
+#MSDatabase:
+  #user-secure: "test"
+  #password-secure: "test"
+
+server:
+  listener:
+    https:
+      tls:
+        keyStore:
+          password-secure: "changeme"
+          key:
+            password-secure: "changeme"
+        trustStore:
+          password-secure: "changeme"
+  requestor:
+    https:
+      tls:
+        keyStore:
+          password-secure: "changeme"
+          key:
+            password-secure: "changeme"
+        trustStore:
+          password-secure: "changeme"
+
+MSserver:
+  https:
+    tls:
+      keyStore:
+        password-secure: "changeme"
+        key:
+          password-secure: "changeme"
+      trustStore:
+        password-secure: "changeme"
