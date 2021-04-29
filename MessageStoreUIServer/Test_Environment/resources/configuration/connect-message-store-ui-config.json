@@ -1,5 +1,5 @@
 {
-  "base-url": "http://localhost:9831/",
+  "base-url": "https://IN2NPDVDCSSV11.dev.corp.local:8085/services/",
   "ms-base-url": "messagestore/api/v3/",
   "std-http-headers": {
     "Content-Type": "application/json",
@@ -10,7 +10,7 @@
   "session-timeout": 300,
   "replay-tabs-allowed": 5,
   "search-tabs-allowed": 5,
-  "auth-provider" : "liam",
+  "auth-provider" : "basic-auth",
   "adalConfig": {
     "config": {
       "auth": {
