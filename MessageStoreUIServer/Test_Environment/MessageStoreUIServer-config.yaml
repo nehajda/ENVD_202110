@@ -37,7 +37,7 @@ server:
       port: "8086"
 
     https:
-      host: "0.0.0.0"
+      host: "IN2NPDVDCSSV11.dev.corp.local"
       port: "8085"
       tls:
         keyStore:
@@ -67,21 +67,21 @@ response:
 
 
 # DataBase Config
-#MSDatabase:
+MSDatabase:
   # required field should be true if using basic Auth or else false.
-  #required: "true"
-  #url: "jdbc:sqlserver://localhost:1433;databaseName=test"
-  #driverClassName: "com.microsoft.sqlserver.jdbc.SQLServerDriver"
-  #reconnectionAttempts: "1"
+  required: "true"
+  url: "jdbc:oracle:thin:@in2npdlnxdb14:1521:IF1212A"
+  driverClassName: "oracle.jdbc.driver.OracleDriver"
+  reconnectionAttempts: "1"
       
-  #connection:
-    #maxPoolSize: "100"
-    #minPoolSize: "10"
-    #preparedStatementCacheSize: "10"
-    #maxWait: "10"
-    #acquireIncrement: "2"
+  connection:
+    maxPoolSize: "100"
+    minPoolSize: "10"
+    preparedStatementCacheSize: "10"
+    maxWait: "10"
+    acquireIncrement: "2"
 
-#queryTimeout: "500"
+queryTimeout: "500"
 
 MSserver:
   requester: 
@@ -94,7 +94,7 @@ MSserver:
     port: "9831"
     
   https:
-    host: "0.0.0.0"
+    host: "IN2NPDVDCSSV11.dev.corp.local"
     port: "9830"
     tls:
       #Controls whether request accepts only Trustore or with keystore
