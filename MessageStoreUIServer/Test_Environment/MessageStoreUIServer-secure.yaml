@@ -1,6 +1,6 @@
-#MSDatabase:
-  #user-secure: "test"
-  #password-secure: "test"
+MSDatabase:
+  user-secure: "CONNECT_MSENVD"
+  password-secure: "CONNECT_MSENVD"
 
 server:
   listener:
