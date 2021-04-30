@@ -15,7 +15,7 @@ server:
       port: "8086"
 
     https:
-      host: "0.0.0.0"
+      host: "IN2NPDVDCSSV11.dev.corp.local"
       port: "8085"
       tls:
         keyStore:
