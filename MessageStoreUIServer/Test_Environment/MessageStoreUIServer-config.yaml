@@ -63,7 +63,7 @@ response:
       img_src:     "\"img-src 'self';\""
       frame_src:   "\"frame-src   ;\""
       # on which server it can make a connection request. it shoud contain self, liam and message store url only.
-      connect_src: "\"connect-src 'self' <message-store-url> <liam-authority-url> <liam-scope-url>\""
+      connect_src: "\"connect-src 'self' \""
 
 
 # DataBase Config
