@@ -126,7 +126,7 @@ ftpInbound:
 jmsInbound:
   queue:
     name: "MB_INBOUND"
-    brokerURL: failover:(tcp://IN2NPDVDCSSV11:61616)?maxReconnectAttempts=0
+    brokerURL: failover:(tcp://IN2NPDVDCSSV12:61616)?maxReconnectAttempts=0
     user: "admin"
     maxConnections: 5
     concurrentConsumers: 5
@@ -177,7 +177,7 @@ fileOutbound:
   
 jmsOutbound:
   queue:
-    brokerURL: failover:(tcp://IN2NPDVDCSSV11:61616)?maxReconnectAttempts=0
+    brokerURL: failover:(tcp://IN2NPDVDCSSV12:61616)?maxReconnectAttempts=0
     user: "admin"
     maxConnections: 5
     concurrentConsumers: 5
