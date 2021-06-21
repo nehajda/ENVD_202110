@@ -41,4 +41,4 @@
 - 'WMA.EAST:*:GS1'
 - 'TMA.WEST:itemMessage|locationMessage:BYDM'
 - 'TMA.WEST:*:GS1'
-- 'LOC.DOC0001:*:GS1'
+- 'LOC.DOC0001:*:BYDM'
